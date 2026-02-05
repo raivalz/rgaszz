@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="id" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raivalla Yuri SE Pratiwi | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&amp;family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .font-serif-elegant {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+    
+    .font-sans-modern {
+      font-family: 'DM Sans', system-ui, sans-serif;
+    }
+    
+    .gradient-moss {
+      background: linear-gradient(135deg, #4a5d4a 0%, #6b7b6b 50%, #8b9b8b 100%);
+    }
+    
+    .text-gradient {
+      background: linear-gradient(135deg, #3d4d3d 0%, #5a6b5a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px -12px rgba(74, 93, 74, 0.25);
+    }
+    
+    .timeline-line {
+      background: linear-gradient(180deg, #4a5d4a 0%, #d4c5b0 100%);
+    }
+    
+    .nav-link {
+      position: relative;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #4a5d4a;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .blob-shape {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      animation: blob-morph 8s ease-in-out infinite;
+    }
+    
+    @keyframes blob-morph {
+      0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+      50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .stagger-1 { animation-delay: 0.1s; }
+    .stagger-2 { animation-delay: 0.2s; }
+    .stagger-3 { animation-delay: 0.3s; }
+    .stagger-4 { animation-delay: 0.4s; }
+    
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #d4c5b0, transparent);
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full font-sans-modern">
+  <div id="app-wrapper" class="w-full h-full overflow-auto bg-gradient-to-br from-stone-50 via-amber-50/30 to-stone-100"><!-- Sticky Header -->
+   <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="backdrop-blur-md bg-stone-50/90 border-b border-stone-200/50">
+     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"><a href="#beranda" class="font-serif-elegant text-2xl font-bold tracking-tight" id="logo-name" style="color: #4a5d4a;"> Raivalla Yuri, SH </a>
+      <nav class="hidden md:flex items-center gap-8"><a href="#beranda" class="nav-link text-sm font-medium tracking-wide uppercase" style="color: #5a4a3a;">Beranda</a> <a href="#about" class="nav-link text-sm font-medium tracking-wide uppercase" style="color: #5a4a3a;">About</a> <a href="#portofolio" class="nav-link text-sm font-medium tracking-wide uppercase" style="color: #5a4a3a;">Portofolio</a> <a href="#contact" class="nav-link text-sm font-medium tracking-wide uppercase" style="color: #5a4a3a;">Contact</a>
+      </nav><button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-stone-200/50 transition-colors" style="color: #4a5d4a;">
+       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+       </svg></button>
+     </div>
+    </div><!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden backdrop-blur-md bg-stone-50/95 border-b border-stone-200/50">
+     <div class="px-6 py-4 space-y-4"><a href="#beranda" class="block text-sm font-medium tracking-wide uppercase" style="color: #5a4a3a;">Beranda</a> <a href="#about" class="block text-sm font-medium tracking-wide uppercase" style="color: #5a4a3a;">About</a> <a href="#portofolio" class="block text-sm font-medium tracking-wide uppercase" style="color: #5a4a3a;">Portofolio</a> <a href="#contact" class="block text-sm font-medium tracking-wide uppercase" style="color: #5a4a3a;">Contact</a>
+     </div>
+    </div>
+   </header><!-- Hero Section -->
+   <section id="beranda" class="min-h-screen pt-24 pb-16 px-6 flex items-center">
+    <div class="max-w-7xl mx-auto w-full">
+     <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center"><!-- Left: Text Content -->
+      <div class="order-2 lg:order-1 space-y-8">
+       <div class="space-y-4 fade-in stagger-1" style="opacity: 0;">
+        <p class="text-sm font-semibold tracking-[0.3em] uppercase" style="color: #4a5d4a;">Welcome</p>
+        <h1 id="hero-name" class="font-serif-elegant text-5xl md:text-6xl lg:text-7xl font-bold leading-tight" style="color: #3d4d3d;">Raivalla Yuri<br>
+         SE Pratiwi, SH.,LL.M.,CLTS</h1>
+        <p id="hero-tagline" class="text-lg md:text-xl font-medium tracking-wide" style="color: #8b7355;">Problem Solver • Translator • Debater</p>
+       </div>
+       <div class="fade-in stagger-2" style="opacity: 0;">
+        <p id="hero-headline" class="font-serif-elegant text-2xl md:text-3xl italic leading-relaxed" style="color: #5a6b5a;">"Menggabungkan hukum, bahasa, dan logika untuk menciptakan solusi yang berdampak."</p>
+       </div>
+       <p id="hero-intro" class="text-base md:text-lg leading-relaxed fade-in stagger-3" style="opacity: 0; color: #6b5b4b;">Saya memiliki ketertarikan pada berbagai bidang yang membentuk pola pikir adaptif dan analitis. Melalui pengalaman di bidang hukum, bahasa asing, dan debat, saya mengembangkan komunikasi strategis serta kemampuan problem solving yang presisi dalam menghadapi tantangan yang kompleks.</p>
+       <div class="flex flex-wrap gap-4 fade-in stagger-4" style="opacity: 0;"><a href="#portofolio" class="group inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-105" style="background: linear-gradient(135deg, #4a5d4a 0%, #5a6b5a 100%);"> Lihat Portofolio 
+         <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+         </svg></a> <a href="#contact" class="inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold border-2 transition-all duration-300 hover:shadow-lg" style="color: #4a5d4a; border-color: #4a5d4a; background: transparent;"> Hubungi Saya </a>
+       </div>
+      </div><!-- Right: Photo/Illustration -->
+      <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+       <div class="relative"><!-- Decorative blob background -->
+        <div class="absolute -inset-8 blob-shape opacity-20" style="background: linear-gradient(135deg, #4a5d4a, #d4c5b0);"></div><!-- Photo container -->
+        <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-3xl overflow-hidden shadow-2xl border-4" style="border-color: #f5f0e8;"><!-- Placeholder for photo - replace IMAGE_URL_HERE with actual photo -->
+         <div id="hero-photo" class="w-full h-full flex items-center justify-center" style="background: linear-gradient(135deg, #d4c5b0 0%, #e8e0d5 50%, #f5f0e8 100%);">
+          <div class="text-center p-8">
+           <div class="w-32 h-32 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: rgba(74, 93, 74, 0.1);">
+            <svg class="w-16 h-16" fill="none" stroke="#4a5d4a" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+           </div>
+           <p class="text-sm font-medium" style="color: #4a5d4a;">Foto Profil</p>
+           <p class="text-xs mt-1" style="color: #8b7355;">IMAGE_URL_HERE</p>
+          </div>
+         </div>
+        </div><!-- Floating decorative elements -->
+        <div class="absolute -top-4 -right-4 w-24 h-24 rounded-2xl rotate-12 opacity-80" style="background: linear-gradient(135deg, #4a5d4a, #6b7b6b);"></div>
+        <div class="absolute -bottom-6 -left-6 w-20 h-20 rounded-full" style="background: #d4c5b0;"></div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div class="section-divider max-w-4xl mx-auto"></div><!-- About Section -->
+   <section id="about" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-16">
+      <p class="text-sm font-semibold tracking-[0.3em] uppercase mb-4" style="color: #4a5d4a;">Tentang</p>
+      <h2 class="font-serif-elegant text-4xl md:text-5xl font-bold" style="color: #3d4d3d;">Tentang Saya</h2>
+     </div>
+     <div class="grid lg:grid-cols-2 gap-16"><!-- Main About Content -->
+      <div class="space-y-6">
+       <p class="text-lg leading-relaxed" style="color: #5a4a3a;">Saya adalah seorang <strong style="color: #4a5d4a;">lawyer</strong> lulusan <strong style="color: #4a5d4a;">Fakultas Hukum Universitas Diponegoro</strong>. Saat ini, saya bekerja sebagai <strong style="color: #4a5d4a;">Corporate Lawyer</strong> di perusahaan multinasional serta menjabat sebagai <strong style="color: #4a5d4a;">Penasihat Hukum di ANTM</strong> dengan fokus pada bidang keuangan.</p>
+       <p class="text-lg leading-relaxed" style="color: #5a4a3a;">Selain itu, saya juga aktif sebagai <strong style="color: #4a5d4a;">freelancer translator</strong> dengan spesialisasi bahasa <strong style="color: #4a5d4a;">Mandarin, Spanyol, Jepang, dan Jerman</strong>.</p><!-- Interest Tags -->
+       <div class="pt-6">
+        <p class="text-sm font-semibold tracking-wide uppercase mb-4" style="color: #8b7355;">Minat &amp; Fokus</p>
+        <div class="flex flex-wrap gap-3"><span class="px-6 py-3 rounded-full text-sm font-semibold text-white" style="background: linear-gradient(135deg, #4a5d4a, #5a6b5a);">⚖️ Hukum</span> <span class="px-6 py-3 rounded-full text-sm font-semibold" style="background: #d4c5b0; color: #3d4d3d;">🌍 Bahasa</span> <span class="px-6 py-3 rounded-full text-sm font-semibold border-2" style="border-color: #4a5d4a; color: #4a5d4a;">💼 Bisnis</span> <span class="px-6 py-3 rounded-full text-sm font-semibold" style="background: #f5f0e8; color: #5a4a3a;">📊 Keuangan</span>
+        </div>
+       </div>
+      </div><!-- Values & Strengths -->
+      <div class="space-y-6">
+       <h3 class="font-serif-elegant text-2xl font-bold" style="color: #3d4d3d;">Nilai &amp; Keunggulan</h3>
+       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="card-hover p-6 rounded-2xl border" style="background: white; border-color: #e8e0d5;">
+         <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: rgba(74, 93, 74, 0.1);"><span class="text-2xl">📚</span>
+         </div>
+         <h4 class="font-semibold mb-2" style="color: #3d4d3d;">Kemauan Belajar</h4>
+         <p class="text-sm" style="color: #8b7355;">Selalu haus akan pengetahuan baru</p>
+        </div>
+        <div class="card-hover p-6 rounded-2xl border" style="background: white; border-color: #e8e0d5;">
+         <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: rgba(74, 93, 74, 0.1);"><span class="text-2xl">🔄</span>
+         </div>
+         <h4 class="font-semibold mb-2" style="color: #3d4d3d;">Adaptif</h4>
+         <p class="text-sm" style="color: #8b7355;">Fleksibel dalam berbagai situasi</p>
+        </div>
+        <div class="card-hover p-6 rounded-2xl border" style="background: white; border-color: #e8e0d5;">
+         <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: rgba(74, 93, 74, 0.1);"><span class="text-2xl">💡</span>
+         </div>
+         <h4 class="font-semibold mb-2" style="color: #3d4d3d;">Problem Solver</h4>
+         <p class="text-sm" style="color: #8b7355;">Solusi kreatif untuk masalah kompleks</p>
+        </div>
+        <div class="card-hover p-6 rounded-2xl border" style="background: white; border-color: #e8e0d5;">
+         <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: rgba(74, 93, 74, 0.1);"><span class="text-2xl">��</span>
+         </div>
+         <h4 class="font-semibold mb-2" style="color: #3d4d3d;">Multilingual</h4>
+         <p class="text-sm" style="color: #8b7355;">EN, 中文, 日本語, ES, DE</p>
+        </div>
+        <div class="card-hover p-6 rounded-2xl border sm:col-span-2" style="background: white; border-color: #e8e0d5;">
+         <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: rgba(74, 93, 74, 0.1);"><span class="text-2xl">🧠</span>
+         </div>
+         <h4 class="font-semibold mb-2" style="color: #3d4d3d;">Critical Thinking</h4>
+         <p class="text-sm" style="color: #8b7355;">Analisis mendalam dan pemikiran logis dalam pengambilan keputusan</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div class="section-divider max-w-4xl mx-auto"></div><!-- Education & Experience Timeline -->
+   <section id="pendidikan" class="py-24 px-6" style="background: linear-gradient(180deg, transparent, rgba(74, 93, 74, 0.03), transparent);">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-16">
+      <p class="text-sm font-semibold tracking-[0.3em] uppercase mb-4" style="color: #4a5d4a;">Perjalanan</p>
+      <h2 class="font-serif-elegant text-4xl md:text-5xl font-bold" style="color: #3d4d3d;">Pendidikan &amp; Pengalaman</h2>
+     </div>
+     <div class="relative max-w-4xl mx-auto"><!-- Timeline Line -->
+      <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 timeline-line transform md:-translate-x-1/2"></div><!-- Timeline Items -->
+      <div class="space-y-12"><!-- 2020 - SD -->
+       <div class="relative flex items-center gap-8 md:gap-0">
+        <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full border-4 transform -translate-x-1/2" style="background: white; border-color: #4a5d4a;"></div>
+        <div class="ml-20 md:ml-0 md:w-1/2 md:pr-12 md:text-right"><span class="inline-block px-3 py-1 rounded-full text-xs font-bold mb-2 text-white" style="background: #4a5d4a;">2020</span>
+         <h3 class="font-serif-elegant text-xl font-bold" style="color: #3d4d3d;">Sekolah Dasar</h3>
+         <p style="color: #8b7355;">SDN Ekanugraha</p>
+        </div>
+       </div><!-- 2023 - SMP -->
+       <div class="relative flex items-center gap-8 md:gap-0">
+        <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full border-4 transform -translate-x-1/2" style="background: white; border-color: #d4c5b0;"></div>
+        <div class="ml-20 md:ml-auto md:w-1/2 md:pl-12"><span class="inline-block px-3 py-1 rounded-full text-xs font-bold mb-2" style="background: #d4c5b0; color: #3d4d3d;">2023</span>
+         <h3 class="font-serif-elegant text-xl font-bold" style="color: #3d4d3d;">Sekolah Menengah Pertama</h3>
+         <p style="color: #8b7355;">SMPN 1 Sagalaherang</p>
+        </div>
+       </div><!-- 2026 - SMA -->
+       <div class="relative flex items-center gap-8 md:gap-0">
+        <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full border-4 transform -translate-x-1/2" style="background: white; border-color: #4a5d4a;"></div>
+        <div class="ml-20 md:ml-0 md:w-1/2 md:pr-12 md:text-right"><span class="inline-block px-3 py-1 rounded-full text-xs font-bold mb-2 text-white" style="background: #4a5d4a;">2026</span>
+         <h3 class="font-serif-elegant text-xl font-bold" style="color: #3d4d3d;">Sekolah Menengah Atas</h3>
+         <p style="color: #8b7355;">SMAN 1 Subang</p>
+        </div>
+       </div><!-- 2027 - IISMA -->
+       <div class="relative flex items-center gap-8 md:gap-0">
+        <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full border-4 transform -translate-x-1/2" style="background: white; border-color: #d4c5b0;"></div>
+        <div class="ml-20 md:ml-auto md:w-1/2 md:pl-12"><span class="inline-block px-3 py-1 rounded-full text-xs font-bold mb-2" style="background: #d4c5b0; color: #3d4d3d;">2027</span>
+         <h3 class="font-serif-elegant text-xl font-bold" style="color: #3d4d3d;">Awardee Beasiswa IISMA</h3>
+         <p style="color: #8b7355;">Indonesian International Student Mobility Awards</p>
+        </div>
+       </div><!-- 2028 - Translator -->
+       <div class="relative flex items-center gap-8 md:gap-0">
+        <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full border-4 transform -translate-x-1/2" style="background: white; border-color: #4a5d4a;"></div>
+        <div class="ml-20 md:ml-0 md:w-1/2 md:pr-12 md:text-right"><span class="inline-block px-3 py-1 rounded-full text-xs font-bold mb-2 text-white" style="background: #4a5d4a;">2028 - Sekarang</span>
+         <h3 class="font-serif-elegant text-xl font-bold" style="color: #3d4d3d;">Freelance Translator</h3>
+         <p style="color: #8b7355;">Mandarin, Spanyol, Jepang, Jerman</p>
+        </div>
+       </div><!-- 2029 - Sarjana Hukum -->
+       <div class="relative flex items-center gap-8 md:gap-0">
+        <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full border-4 transform -translate-x-1/2" style="background: white; border-color: #d4c5b0;"></div>
+        <div class="ml-20 md:ml-auto md:w-1/2 md:pl-12"><span class="inline-block px-3 py-1 rounded-full text-xs font-bold mb-2" style="background: #d4c5b0; color: #3d4d3d;">2029</span>
+         <h3 class="font-serif-elegant text-xl font-bold" style="color: #3d4d3d;">Sarjana Hukum (SH)</h3>
+         <p style="color: #8b7355;">Universitas Diponegoro</p>
+        </div>
+       </div><!-- 2030 - Pelatihan Finance -->
+       <div class="relative flex items-center gap-8 md:gap-0">
+        <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full border-4 transform -translate-x-1/2" style="background: white; border-color: #4a5d4a;"></div>
+        <div class="ml-20 md:ml-0 md:w-1/2 md:pr-12 md:text-right"><span class="inline-block px-3 py-1 rounded-full text-xs font-bold mb-2 text-white" style="background: #4a5d4a;">2030</span>
+         <h3 class="font-serif-elegant text-xl font-bold" style="color: #3d4d3d;">Pelatihan Finance</h3>
+         <p style="color: #8b7355;">International Monetary Fund (IMF)</p>
+        </div>
+       </div><!-- 2031 - Corporate Lawyer -->
+       <div class="relative flex items-center gap-8 md:gap-0">
+        <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full border-4 transform -translate-x-1/2" style="background: white; border-color: #d4c5b0;"></div>
+        <div class="ml-20 md:ml-auto md:w-1/2 md:pl-12"><span class="inline-block px-3 py-1 rounded-full text-xs font-bold mb-2" style="background: #d4c5b0; color: #3d4d3d;">2031 - Sekarang</span>
+         <h3 class="font-serif-elegant text-xl font-bold" style="color: #3d4d3d;">Corporate Lawyer</h3>
+         <p style="color: #8b7355;">Perusahaan Multinasional &amp; Penasihat Hukum ANTM</p>
+        </div>
+       </div><!-- 2033 - Program Kemanusiaan -->
+       <div class="relative flex items-center gap-8 md:gap-0">
+        <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full border-4 transform -translate-x-1/2" style="background: white; border-color: #4a5d4a;"></div>
+        <div class="ml-20 md:ml-0 md:w-1/2 md:pr-12 md:text-right"><span class="inline-block px-3 py-1 rounded-full text-xs font-bold mb-2 text-white" style="background: #4a5d4a;">2033</span>
+         <h3 class="font-serif-elegant text-xl font-bold" style="color: #3d4d3d;">Program Kemanusiaan</h3>
+         <p style="color: #8b7355;">UNICEF</p>
+        </div>
+       </div><!-- 2033 - Magister -->
+       <div class="relative flex items-center gap-8 md:gap-0">
+        <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full border-4 transform -translate-x-1/2" style="background: white; border-color: #d4c5b0;"></div>
+        <div class="ml-20 md:ml-auto md:w-1/2 md:pl-12"><span class="inline-block px-3 py-1 rounded-full text-xs font-bold mb-2" style="background: #d4c5b0; color: #3d4d3d;">2033</span>
+         <h3 class="font-serif-elegant text-xl font-bold" style="color: #3d4d3d;">Master of Laws (LL.M.)</h3>
+         <p style="color: #8b7355;">Harvard University</p>
+        </div>
+       </div><!-- 2034 - Dosen Tamu -->
+       <div class="relative flex items-center gap-8 md:gap-0">
+        <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full border-4 transform -translate-x-1/2" style="background: white; border-color: #4a5d4a;"></div>
+        <div class="ml-20 md:ml-0 md:w-1/2 md:pr-12 md:text-right"><span class="inline-block px-3 py-1 rounded-full text-xs font-bold mb-2 text-white" style="background: #4a5d4a;">2034 - Sekarang</span>
+         <h3 class="font-serif-elegant text-xl font-bold" style="color: #3d4d3d;">Dosen Tamu</h3>
+         <p style="color: #8b7355;">NYU Law, UI, Undip, Unpad, UGM</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div class="section-divider max-w-4xl mx-auto"></div><!-- Skills Section -->
+   <section id="keahlian" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-16">
+      <p class="text-sm font-semibold tracking-[0.3em] uppercase mb-4" style="color: #4a5d4a;">Kompetensi</p>
+      <h2 class="font-serif-elegant text-4xl md:text-5xl font-bold" style="color: #3d4d3d;">Keahlian</h2>
+     </div>
+     <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"><!-- Hard Skills -->
+      <div class="card-hover p-8 rounded-3xl" style="background: white; border: 1px solid #e8e0d5;">
+       <div class="flex items-center gap-4 mb-6">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, #4a5d4a, #5a6b5a);">
+         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+         </svg>
+        </div>
+        <h3 class="font-serif-elegant text-2xl font-bold" style="color: #3d4d3d;">Hard Skills</h3>
+       </div>
+       <ul class="space-y-4">
+        <li class="flex items-center gap-4"><span class="w-2 h-2 rounded-full" style="background: #4a5d4a;"></span> <span style="color: #5a4a3a;">Legal Drafting</span></li>
+        <li class="flex items-center gap-4"><span class="w-2 h-2 rounded-full" style="background: #4a5d4a;"></span> <span style="color: #5a4a3a;">Microsoft Word</span></li>
+        <li class="flex items-center gap-4"><span class="w-2 h-2 rounded-full" style="background: #4a5d4a;"></span> <span style="color: #5a4a3a;">Microsoft Excel</span></li>
+       </ul>
+      </div><!-- Soft Skills -->
+      <div class="card-hover p-8 rounded-3xl" style="background: white; border: 1px solid #e8e0d5;">
+       <div class="flex items-center gap-4 mb-6">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center" style="background: #d4c5b0;">
+         <svg class="w-7 h-7" fill="none" stroke="#3d4d3d" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+         </svg>
+        </div>
+        <h3 class="font-serif-elegant text-2xl font-bold" style="color: #3d4d3d;">Soft Skills</h3>
+       </div>
+       <ul class="space-y-4">
+        <li class="flex items-center gap-4"><span class="w-2 h-2 rounded-full" style="background: #d4c5b0;"></span> <span style="color: #5a4a3a;">Komunikasi Strategis</span></li>
+        <li class="flex items-center gap-4"><span class="w-2 h-2 rounded-full" style="background: #d4c5b0;"></span> <span style="color: #5a4a3a;">Penguasaan Bahasa Asing</span></li>
+        <li class="flex items-center gap-4"><span class="w-2 h-2 rounded-full" style="background: #d4c5b0;"></span> <span style="color: #5a4a3a;">Berpikir Kritis</span></li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div class="section-divider max-w-4xl mx-auto"></div><!-- Portfolio Section -->
+   <section id="portofolio" class="py-24 px-6" style="background: linear-gradient(180deg, transparent, rgba(212, 197, 176, 0.1), transparent);">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-16">
+      <p class="text-sm font-semibold tracking-[0.3em] uppercase mb-4" style="color: #4a5d4a;">Karya</p>
+      <h2 class="font-serif-elegant text-4xl md:text-5xl font-bold" style="color: #3d4d3d;">Portofolio</h2>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"><!-- Jurnal 1: Corporate Governance -->
+      <div class="card-hover rounded-3xl overflow-hidden" style="background: white; border: 1px solid #e8e0d5;">
+       <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #4a5d4a, #6b7b6b);"><span class="text-6xl">⚖️</span>
+       </div>
+       <div class="p-6"><span class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3" style="background: rgba(74, 93, 74, 0.1); color: #4a5d4a;">Jurnal Hukum</span>
+        <h3 class="font-serif-elegant text-xl font-bold mb-2" style="color: #3d4d3d;">Aspek Hukum Corporate Governance dalam Perusahaan Terbuka</h3>
+        <p class="text-sm mb-4" style="color: #8b7355;">Analisis komprehensif tentang kerangka hukum tata kelola perusahaan dan perlindungan investor di pasar modal Indonesia.</p><button class="inline-flex items-center gap-2 text-sm font-semibold transition-all hover:gap-3" style="color: #4a5d4a;"> Lihat Detail 
+         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg></button>
+       </div>
+      </div><!-- Jurnal 2: Fintech -->
+      <div class="card-hover rounded-3xl overflow-hidden" style="background: white; border: 1px solid #e8e0d5;">
+       <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #d4c5b0, #e8e0d5);"><span class="text-6xl">💳</span>
+       </div>
+       <div class="p-6"><span class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3" style="background: #d4c5b0; color: #3d4d3d;">Jurnal Hukum</span>
+        <h3 class="font-serif-elegant text-xl font-bold mb-2" style="color: #3d4d3d;">Regulasi Fintech dan Perlindungan Konsumen Jasa Keuangan Digital</h3>
+        <p class="text-sm mb-4" style="color: #8b7355;">Kajian yuridis tentang tantangan regulasi teknologi finansial dalam menjaga keamanan transaksi dan hak konsumen.</p><button class="inline-flex items-center gap-2 text-sm font-semibold transition-all hover:gap-3" style="color: #4a5d4a;"> Lihat Detail 
+         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg></button>
+       </div>
+      </div><!-- Jurnal 3: Anti Money Laundering -->
+      <div class="card-hover rounded-3xl overflow-hidden" style="background: white; border: 1px solid #e8e0d5;">
+       <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #8b7355, #a08b70);"><span class="text-6xl">🔍</span>
+       </div>
+       <div class="p-6"><span class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3" style="background: rgba(139, 115, 85, 0.1); color: #8b7355;">Jurnal Hukum</span>
+        <h3 class="font-serif-elegant text-xl font-bold mb-2" style="color: #3d4d3d;">Implementasi UU TPPU dan AML dalam Sektor Perbankan Indonesia</h3>
+        <p class="text-sm mb-4" style="color: #8b7355;">Studi implementasi pencegahan pencucian uang dan pendanaan terorisme dalam sistem keuangan nasional.</p><button class="inline-flex items-center gap-2 text-sm font-semibold transition-all hover:gap-3" style="color: #4a5d4a;"> Lihat Detail 
+         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg></button>
+       </div>
+      </div><!-- Jurnal 4: M&A -->
+      <div class="card-hover rounded-3xl overflow-hidden" style="background: white; border: 1px solid #e8e0d5;">
+       <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #5a6b5a, #4a5d4a);"><span class="text-6xl">🤝</span>
+       </div>
+       <div class="p-6"><span class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3" style="background: rgba(74, 93, 74, 0.1); color: #4a5d4a;">Jurnal Hukum</span>
+        <h3 class="font-serif-elegant text-xl font-bold mb-2" style="color: #3d4d3d;">Aspek Hukum Merger dan Akuisisi Lintas Negara: Perspektif Hukum Bisnis Internasional</h3>
+        <p class="text-sm mb-4" style="color: #8b7355;">Tinjauan yuridis transaksi M&amp;A internasional, due diligence, dan harmonisasi regulasi lintas yurisdiksi.</p><button class="inline-flex items-center gap-2 text-sm font-semibold transition-all hover:gap-3" style="color: #4a5d4a;"> Lihat Detail 
+         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg></button>
+       </div>
+      </div><!-- Jurnal 5: Tax Law -->
+      <div class="card-hover rounded-3xl overflow-hidden" style="background: white; border: 1px solid #e8e0d5;">
+       <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #c9b99a, #d4c5b0);"><span class="text-6xl">📊</span>
+       </div>
+       <div class="p-6"><span class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3" style="background: #d4c5b0; color: #3d4d3d;">Jurnal Hukum</span>
+        <h3 class="font-serif-elegant text-xl font-bold mb-2" style="color: #3d4d3d;">Transfer Pricing dan Kepatuhan Pajak Korporasi: Analisis Hukum Perpajakan Internasional</h3>
+        <p class="text-sm mb-4" style="color: #8b7355;">Pembahasan mengenai mekanisme transfer pricing, penghindaran pajak, dan regulasi BEPS dalam konteks perusahaan multinasional.</p><button class="inline-flex items-center gap-2 text-sm font-semibold transition-all hover:gap-3" style="color: #4a5d4a;"> Lihat Detail 
+         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg></button>
+       </div>
+      </div><!-- Jurnal 6: Securities Law -->
+      <div class="card-hover rounded-3xl overflow-hidden" style="background: white; border: 1px solid #e8e0d5;">
+       <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #7a6a5a, #8b7355);"><span class="text-6xl">📈</span>
+       </div>
+       <div class="p-6"><span class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3" style="background: rgba(139, 115, 85, 0.1); color: #8b7355;">Jurnal Hukum</span>
+        <h3 class="font-serif-elegant text-xl font-bold mb-2" style="color: #3d4d3d;">Penegakan Hukum Insider Trading dalam Pasar Modal Indonesia</h3>
+        <p class="text-sm mb-4" style="color: #8b7355;">Evaluasi efektivitas regulasi dan penegakan hukum terhadap praktik perdagangan orang dalam di bursa efek.</p><button class="inline-flex items-center gap-2 text-sm font-semibold transition-all hover:gap-3" style="color: #4a5d4a;"> Lihat Detail 
+         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg></button>
+       </div>
+      </div><!-- Article Card -->
+      <div class="card-hover rounded-3xl overflow-hidden" style="background: white; border: 1px solid #e8e0d5;">
+       <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #4a5d4a, #6b7b6b);"><span class="text-6xl">📰</span>
+       </div>
+       <div class="p-6"><span class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3" style="background: rgba(74, 93, 74, 0.1); color: #4a5d4a;">Artikel</span>
+        <h3 class="font-serif-elegant text-xl font-bold mb-2" style="color: #3d4d3d;">Bahaya Judi Online</h3>
+        <p class="text-sm mb-4" style="color: #8b7355;">Analisis mendalam tentang dampak negatif judi online terhadap masyarakat dan aspek hukumnya.</p><button class="inline-flex items-center gap-2 text-sm font-semibold transition-all hover:gap-3" style="color: #4a5d4a;"> Lihat Detail 
+         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg></button>
+       </div>
+      </div><!-- Poetry Card -->
+      <div class="card-hover rounded-3xl overflow-hidden" style="background: white; border: 1px solid #e8e0d5;">
+       <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #d4c5b0, #e8e0d5);"><span class="text-6xl">✨</span>
+       </div>
+       <div class="p-6"><span class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3" style="background: #d4c5b0; color: #3d4d3d;">Puisi</span>
+        <h3 class="font-serif-elegant text-xl font-bold mb-2" style="color: #3d4d3d;">Puisi untuk Lomba Online</h3>
+        <p class="text-sm mb-4" style="color: #8b7355;">Karya puisi yang menggambarkan keindahan bahasa dan ekspresi artistik.</p><button class="inline-flex items-center gap-2 text-sm font-semibold transition-all hover:gap-3" style="color: #4a5d4a;"> Lihat Detail 
+         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg></button>
+       </div>
+      </div><!-- Short Story Card -->
+      <div class="card-hover rounded-3xl overflow-hidden" style="background: white; border: 1px solid #e8e0d5;">
+       <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #8b7355, #a08b70);"><span class="text-6xl">📖</span>
+       </div>
+       <div class="p-6"><span class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3" style="background: rgba(139, 115, 85, 0.1); color: #8b7355;">Cerpen</span>
+        <h3 class="font-serif-elegant text-xl font-bold mb-2" style="color: #3d4d3d;">Cerpen</h3>
+        <p class="text-sm mb-4" style="color: #8b7355;">Kumpulan cerita pendek dengan narasi yang memikat dan pesan yang bermakna.</p><button class="inline-flex items-center gap-2 text-sm font-semibold transition-all hover:gap-3" style="color: #4a5d4a;"> Lihat Detail 
+         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg></button>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div class="section-divider max-w-4xl mx-auto"></div><!-- Organization Experience Section -->
+   <section id="organisasi" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-16">
+      <p class="text-sm font-semibold tracking-[0.3em] uppercase mb-4" style="color: #4a5d4a;">Aktivitas</p>
+      <h2 class="font-serif-elegant text-4xl md:text-5xl font-bold" style="color: #3d4d3d;">Pengalaman Organisasi</h2>
+     </div>
+     <div class="max-w-3xl mx-auto space-y-6"><!-- SMP -->
+      <div class="card-hover p-6 rounded-2xl flex items-start gap-4" style="background: white; border: 1px solid #e8e0d5;">
+       <div class="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #4a5d4a, #5a6b5a);"><span class="text-white font-bold text-sm">2022</span>
+       </div>
+       <div>
+        <h3 class="font-semibold text-lg" style="color: #3d4d3d;">Ketua KIR IPA</h3>
+        <p class="text-sm" style="color: #8b7355;">SMP • Kelompok Ilmiah Remaja bidang IPA</p>
+       </div>
+      </div><!-- SMA - Pekan Kreativitas -->
+      <div class="card-hover p-6 rounded-2xl flex items-start gap-4" style="background: white; border: 1px solid #e8e0d5;">
+       <div class="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #d4c5b0;"><span class="font-bold text-sm" style="color: #3d4d3d;">2023</span>
+       </div>
+       <div>
+        <h3 class="font-semibold text-lg" style="color: #3d4d3d;">Divisi Acara Pekan Kreativitas</h3>
+        <p class="text-sm" style="color: #8b7355;">SMAN 1 Subang • Koordinator kegiatan seni dan budaya</p>
+       </div>
+      </div><!-- SMA - Jurnalistik -->
+      <div class="card-hover p-6 rounded-2xl flex items-start gap-4" style="background: white; border: 1px solid #e8e0d5;">
+       <div class="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #4a5d4a, #5a6b5a);"><span class="text-white font-bold text-sm">2024</span>
+       </div>
+       <div>
+        <h3 class="font-semibold text-lg" style="color: #3d4d3d;">Ketua Jurnalistik SMA</h3>
+        <p class="text-sm" style="color: #8b7355;">SMA • Memimpin tim jurnalistik sekolah</p>
+       </div>
+      </div><!-- SMA - Bulan Bahasa -->
+      <div class="card-hover p-6 rounded-2xl flex items-start gap-4" style="background: white; border: 1px solid #e8e0d5;">
+       <div class="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #d4c5b0;"><span class="font-bold text-sm" style="color: #3d4d3d;">2024</span>
+       </div>
+       <div>
+        <h3 class="font-semibold text-lg" style="color: #3d4d3d;">Panitia Bulan Bahasa - Bidang Debat</h3>
+        <p class="text-sm" style="color: #8b7355;">SMA • Koordinator kompetisi debat</p>
+       </div>
+      </div><!-- Undip - HMH -->
+      <div class="card-hover p-6 rounded-2xl flex items-start gap-4" style="background: white; border: 1px solid #e8e0d5;">
+       <div class="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #4a5d4a, #5a6b5a);"><span class="text-white font-bold text-sm">2025</span>
+       </div>
+       <div>
+        <h3 class="font-semibold text-lg" style="color: #3d4d3d;">Anggota Himpunan Mahasiswa Hukum (HMH)</h3>
+        <p class="text-sm" style="color: #8b7355;">Universitas Diponegoro • Organisasi kemahasiswaan fakultas</p>
+       </div>
+      </div><!-- Undip - Finance Society -->
+      <div class="card-hover p-6 rounded-2xl flex items-start gap-4" style="background: white; border: 1px solid #e8e0d5;">
+       <div class="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #d4c5b0;"><span class="font-bold text-sm" style="color: #3d4d3d;">2025</span>
+       </div>
+       <div>
+        <h3 class="font-semibold text-lg" style="color: #3d4d3d;">Anggota Finance &amp; Economics Society</h3>
+        <p class="text-sm" style="color: #8b7355;">Universitas Diponegoro • Komunitas keuangan dan ekonomi</p>
+       </div>
+      </div><!-- International Law -->
+      <div class="card-hover p-6 rounded-2xl flex items-start gap-4" style="background: white; border: 1px solid #e8e0d5;">
+       <div class="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #4a5d4a, #5a6b5a);"><span class="text-white font-bold text-sm">2026</span>
+       </div>
+       <div>
+        <h3 class="font-semibold text-lg" style="color: #3d4d3d;">Anggota International Law</h3>
+        <p class="text-sm" style="color: #8b7355;">Organisasi hukum internasional</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div class="section-divider max-w-4xl mx-auto"></div><!-- Contact Section -->
+   <section id="contact" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-16">
+      <p class="text-sm font-semibold tracking-[0.3em] uppercase mb-4" style="color: #4a5d4a;">Kontak</p>
+      <h2 class="font-serif-elegant text-4xl md:text-5xl font-bold" style="color: #3d4d3d;">Hubungi Saya</h2>
+      <p class="mt-4 text-lg max-w-2xl mx-auto" style="color: #8b7355;">Tertarik untuk berkolaborasi atau memiliki pertanyaan? Jangan ragu untuk menghubungi saya.</p>
+     </div>
+     <div class="max-w-2xl mx-auto">
+      <div class="card-hover p-8 md:p-12 rounded-3xl" style="background: white; border: 1px solid #e8e0d5;">
+       <form id="contact-form" class="space-y-6">
+        <div class="grid md:grid-cols-2 gap-6">
+         <div><label for="name" class="block text-sm font-semibold mb-2" style="color: #3d4d3d;">Nama</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border transition-all focus:outline-none focus:ring-2" style="border-color: #e8e0d5; background: #faf8f5; --tw-ring-color: rgba(74, 93, 74, 0.3);" placeholder="Nama lengkap Anda">
+         </div>
+         <div><label for="email" class="block text-sm font-semibold mb-2" style="color: #3d4d3d;">Email</label> <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border transition-all focus:outline-none focus:ring-2" style="border-color: #e8e0d5; background: #faf8f5; --tw-ring-color: rgba(74, 93, 74, 0.3);" placeholder="email@example.com">
+         </div>
+        </div>
+        <div><label for="subject" class="block text-sm font-semibold mb-2" style="color: #3d4d3d;">Subjek</label> <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 rounded-xl border transition-all focus:outline-none focus:ring-2" style="border-color: #e8e0d5; background: #faf8f5; --tw-ring-color: rgba(74, 93, 74, 0.3);" placeholder="Perihal pesan">
+        </div>
+        <div><label for="message" class="block text-sm font-semibold mb-2" style="color: #3d4d3d;">Pesan</label> <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-xl border transition-all focus:outline-none focus:ring-2 resize-none" style="border-color: #e8e0d5; background: #faf8f5; --tw-ring-color: rgba(74, 93, 74, 0.3);" placeholder="Tulis pesan Anda di sini..."></textarea>
+        </div><button type="submit" class="w-full py-4 rounded-xl font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-[1.02]" style="background: linear-gradient(135deg, #4a5d4a 0%, #5a6b5a 100%);"> Kirim Pesan </button>
+       </form>
+       <div id="form-success" class="hidden text-center py-8">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: rgba(74, 93, 74, 0.1);">
+         <svg class="w-8 h-8" fill="none" stroke="#4a5d4a" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+         </svg>
+        </div>
+        <h3 class="font-serif-elegant text-2xl font-bold mb-2" style="color: #3d4d3d;">Pesan Terkirim!</h3>
+        <p style="color: #8b7355;">Terima kasih telah menghubungi saya. Saya akan segera merespons pesan Anda.</p>
+       </div><!-- Contact Info -->
+       <div class="mt-8 pt-8 border-t" style="border-color: #e8e0d5;">
+        <div class="flex flex-wrap justify-center gap-8">
+         <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(74, 93, 74, 0.1);">
+           <svg class="w-5 h-5" fill="none" stroke="#4a5d4a" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+           </svg>
+          </div><span id="contact-email-display" class="text-sm" style="color: #5a4a3a;">raivalla@email.com</span>
+         </div>
+         <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(74, 93, 74, 0.1);">
+           <svg class="w-5 h-5" fill="none" stroke="#4a5d4a" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+           </svg>
+          </div><span id="contact-phone-display" class="text-sm" style="color: #5a4a3a;">+62 812 3456 7890</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="py-12 px-6" style="background: linear-gradient(135deg, #4a5d4a, #3d4d3d);">
+    <div class="max-w-7xl mx-auto text-center">
+     <p class="font-serif-elegant text-2xl font-bold text-white mb-4">Raivalla Yuri SE Pratiwi, SH.,LL.M.,CLTS</p>
+     <p class="text-sm mb-6" style="color: rgba(255,255,255,0.7);">Problem Solver • Translator • Debater</p>
+     <div class="flex justify-center gap-4 mb-8"><a href="#" class="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110" style="background: rgba(255,255,255,0.1);">
+       <svg class="w-5 h-5 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+       </svg></a> <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110" style="background: rgba(255,255,255,0.1);">
+       <svg class="w-5 h-5 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+       </svg></a>
+     </div>
+     <p class="text-xs" style="color: rgba(255,255,255,0.5);">© 2025 Raivalla Yuri SE Pratiwi, SH.,LL.M.,CLTS. All rights reserved.</p>
+    </div>
+   </footer>
+  </div>
+  <script>
+    // Default configuration
+    const defaultConfig = {
+      hero_name: 'Raivalla Yuri SE Pratiwi, SH.,LL.M.,CLTS',
+      hero_tagline: 'Problem Solver • Translator • Debater',
+      hero_headline: '"Menggabungkan hukum, bahasa, dan logika untuk menciptakan solusi yang berdampak."',
+      contact_email: 'raivalla@email.com',
+      contact_phone: '+62 812 3456 7890',
+      primary_color: '#4a5d4a',
+      secondary_color: '#d4c5b0',
+      text_color: '#3d4d3d',
+      accent_color: '#8b7355',
+      background_color: '#faf8f5'
+    };
+    
+    let config = { ...defaultConfig };
+    
+    // onConfigChange function - updates UI based on config
+    async function onConfigChange(newConfig) {
+      config = { ...config, ...newConfig };
+      
+      // Update hero name
+      const heroNameEl = document.getElementById('hero-name');
+      if (heroNameEl) {
+        heroNameEl.innerHTML = (config.hero_name || defaultConfig.hero_name).replace(' ', '<br/>');
+      }
+      
+      // Update logo name
+      const logoNameEl = document.getElementById('logo-name');
+      if (logoNameEl) {
+        const fullName = config.hero_name || defaultConfig.hero_name;
+        // Extract first name and last name before comma (gelar)
+        const nameBeforeDegree = fullName.split(',')[0].trim();
+        const nameParts = nameBeforeDegree.split(' ');
+        logoNameEl.textContent = nameParts.length >= 2 ? `${nameParts[0]} ${nameParts[1]}, SH` : fullName;
+      }
+      
+      // Update hero tagline
+      const heroTaglineEl = document.getElementById('hero-tagline');
+      if (heroTaglineEl) {
+        heroTaglineEl.textContent = config.hero_tagline || defaultConfig.hero_tagline;
+      }
+      
+      // Update hero headline
+      const heroHeadlineEl = document.getElementById('hero-headline');
+      if (heroHeadlineEl) {
+        heroHeadlineEl.textContent = config.hero_headline || defaultConfig.hero_headline;
+      }
+      
+      // Update contact email display
+      const contactEmailDisplay = document.getElementById('contact-email-display');
+      if (contactEmailDisplay) {
+        contactEmailDisplay.textContent = config.contact_email || defaultConfig.contact_email;
+      }
+      
+      // Update contact phone display
+      const contactPhoneDisplay = document.getElementById('contact-phone-display');
+      if (contactPhoneDisplay) {
+        contactPhoneDisplay.textContent = config.contact_phone || defaultConfig.contact_phone;
+      }
+    }
+    
+    // mapToCapabilities function
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => config.secondary_color || defaultConfig.secondary_color,
+            set: (value) => {
+              config.secondary_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ secondary_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => config.primary_color || defaultConfig.primary_color,
+            set: (value) => {
+              config.primary_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ primary_color: value });
+            }
+          },
+          {
+            get: () => config.accent_color || defaultConfig.accent_color,
+            set: (value) => {
+              config.accent_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ accent_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || 'DM Sans',
+          set: (value) => {
+            config.font_family = value;
+            if (window.elementSdk) window.elementSdk.setConfig({ font_family: value });
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || 16,
+          set: (value) => {
+            config.font_size = value;
+            if (window.elementSdk) window.elementSdk.setConfig({ font_size: value });
+          }
+        }
+      };
+    }
+    
+    // mapToEditPanelValues function
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ['hero_name', config.hero_name || defaultConfig.hero_name],
+        ['hero_tagline', config.hero_tagline || defaultConfig.hero_tagline],
+        ['hero_headline', config.hero_headline || defaultConfig.hero_headline],
+        ['contact_email', config.contact_email || defaultConfig.contact_email],
+        ['contact_phone', config.contact_phone || defaultConfig.contact_phone]
+      ]);
+    }
+    
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+    
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      
+      // Close menu when clicking a link
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+    
+    // Header scroll effect
+    const header = document.getElementById('main-header');
+    let lastScroll = 0;
+    
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 100) {
+        header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+      
+      lastScroll = currentScroll;
+    });
+    
+    // Contact form handling
+    const contactForm = document.getElementById('contact-form');
+    const formSuccess = document.getElementById('form-success');
+    
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Hide form, show success message
+        contactForm.classList.add('hidden');
+        formSuccess.classList.remove('hidden');
+        
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          contactForm.reset();
+          formSuccess.classList.add('hidden');
+          contactForm.classList.remove('hidden');
+        }, 5000);
+      });
+    }
+    
+    // Trigger fade-in animations
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.style.opacity = '1';
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c56007c9422a459',t:'MTc2OTY2MTEwNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
