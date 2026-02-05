@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <html lang="id" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raivalla Yuri SE Pratiwi | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&amp;family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <style>
+      body {
+        box-sizing: border-box;
+      }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      .font-serif-elegant {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+      }
+      
+      .font-sans-modern {
+        font-family: 'DM Sans', system-ui, sans-serif;
+      }
+      
+      .gradient-moss {
+        background: linear-gradient(135deg, #4a5d4a 0%, #6b7b6b 50%, #8b9b8b 100%);
+      }
+      
+      .text-gradient {
+        background: linear-gradient(135deg, #3d4d3d 0%, #5a6b5a 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .card-hover {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 50px -12px rgba(74, 93, 74, 0.25);
+      }
+      
+      .timeline-line {
+        background: linear-gradient(180deg, #4a5d4a 0%, #d4c5b0 100%);
+      }
+      
+      .nav-link {
+        position: relative;
+      }
+      
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #4a5d4a;
+        transition: width 0.3s ease;
+      }
+      
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      
+      .blob-shape {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        animation: blob-morph 8s ease-in-out infinite;
+      }
+      
+      @keyframes blob-morph {
+        0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+      }
+      
+      .fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      .stagger-1 { animation-delay: 0.1s; opacity: 0; }
+      .stagger-2 { animation-delay: 0.2s; opacity: 0; }
+      .stagger-3 { animation-delay: 0.3s; opacity: 0; }
+      .stagger-4 { animation-delay: 0.4s; opacity: 0; }
+      
+      .section-divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #d4c5b0, transparent);
+      }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full font-sans-modern">
+  <div id="app-wrapper" class="w-full h-full overflow-auto bg-gradient-to-br from-stone-50 via-amber-50/30 to-stone-100"><!-- Sticky Header -->
+   <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="backdrop-blur-md bg-stone-50/90 border-b border-stone-200/50">
+     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"><a href="#beranda" class="font-serif-elegant text-2xl font-bold tracking-tight" id="logo-name" style="color: #4a5d4a;">Raivalla Yuri, SH</a>
+      <nav class="hidden md:flex items-center gap-8"><a href="#beranda" class="nav-link text-sm font-medium tracking-wide uppercase" style="color: #5a4a3a;">Beranda</a> <a href="#about" class="nav-link text-sm font-medium tracking-wide uppercase" style="color: #5a4a3a;">About</a> <a href="#portofolio" class="nav-link text-sm font-medium tracking-wide uppercase" style="color: #5a4a3a;">Portofolio</a> <a href="#contact" class="nav-link text-sm font-medium tracking-wide uppercase" style="color: #5a4a3a;">Contact</a>
+      </nav><button id="menu-toggle" class="md:hidden p-2">
+       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" style="color: #4a5d4a;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+       </svg></button>
+     </div><!-- Mobile Menu -->
+     <nav id="mobile-menu" class="hidden md:hidden border-t border-stone-200/50 px-6 py-4 flex flex-col gap-4"><a href="#beranda" class="text-sm font-medium tracking-wide uppercase" style="color: #5a4a3a;">Beranda</a> <a href="#about" class="text-sm font-medium tracking-wide uppercase" style="color: #5a4a3a;">About</a> <a href="#portofolio" class="text-sm font-medium tracking-wide uppercase" style="color: #5a4a3a;">Portofolio</a> <a href="#contact" class="text-sm font-medium tracking-wide uppercase" style="color: #5a4a3a;">Contact</a>
+     </nav>
+    </div>
+   </header><!-- Main Content -->
+   <main class="pt-20"><!-- Hero Section -->
+    <section id="beranda" class="min-h-screen flex items-center justify-center px-6 py-20">
+     <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="fade-in stagger-1">
+       <h1 class="font-serif-elegant text-5xl md:text-6xl font-bold leading-tight mb-6" style="color: #3d4d3d;">Raivalla Yuri<br><span class="text-gradient">SE Pratiwi</span></h1>
+       <p id="hero-tagline" class="text-xl md:text-2xl mb-8 leading-relaxed" style="color: #5a6b5a;">Advokat &amp; Konsultan Hukum Berpengalaman</p>
+       <p class="text-lg mb-8" style="color: #6b7b7b;"><span style="font-weight: 600;">Spesialisasi:</span> Hukum Kecerdasan Buatan • Hukum Intelektual • Hukum Korporat</p>
+       <p class="text-lg mb-8" style="color: #6b7b7b;"><span style="font-weight: 600;">Gelar &amp; Sertifikasi:</span> S.H • LL.M • CLA • C.CLE • CCL</p>
+       <p id="hero-description" class="text-lg mb-10 leading-relaxed max-w-xl" style="color: #6b7b7b;">Memberikan solusi hukum terpadu dengan pendekatan profesional dan strategis untuk kebutuhan bisnis dan personal Anda.</p>
+       <div class="flex gap-6 flex-wrap"><a href="#contact" class="px-8 py-3 rounded-lg font-semibold transition-all hover:shadow-lg" style="background-color: #4a5d4a; color: white;"> Konsultasi Sekarang </a> <a href="#portofolio" class="px-8 py-3 rounded-lg font-semibold border-2 transition-all hover:bg-stone-100" style="border-color: #4a5d4a; color: #4a5d4a;"> Lihat Portofolio </a>
+       </div>
+      </div>
+      <div class="fade-in stagger-2 hidden md:block">
+       <div class="blob-shape overflow-hidden flex items-center justify-center" style="width: 400px; height: 400px; margin: 0 auto;"><img src="https://raw.githubusercontent.com/raivalz/rgaszz/refs/heads/main/WhatsApp%20Image%202026-02-05%20at%2009.57.43.jpeg" alt="Raivalla Yuri SE Pratiwi" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Image failed to load:', this.src); this.style.background='linear-gradient(135deg, #d4c5b0 0%, #b8a98a 100%)'; this.alt='Profile photo unavailable';">
+       </div>
+      </div>
+     </div>
+    </section>
+    <div class="section-divider"></div><!-- About Section -->
+    <section id="about" class="py-20 px-6">
+     <div class="max-w-7xl mx-auto">
+      <h2 class="font-serif-elegant text-4xl md:text-5xl font-bold mb-16 text-center" style="color: #3d4d3d;">Tentang Saya</h2>
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+       <div class="fade-in stagger-1 card-hover p-8 bg-white rounded-xl border border-stone-200/50">
+        <div class="text-4xl mb-4">
+         ⚖️
+        </div>
+        <h3 class="font-serif-elegant text-2xl font-bold mb-4" style="color: #4a5d4a;">Pengalaman</h3>
+        <p style="color: #6b7b7b;">Lebih dari 10 tahun mempraktikkan hukum di berbagai bidang dengan rekam jejak keberhasilan yang terbukti.</p>
+       </div>
+       <div class="fade-in stagger-2 card-hover p-8 bg-white rounded-xl border border-stone-200/50">
+        <div class="text-4xl mb-4">
+         🎓
+        </div>
+        <h3 class="font-serif-elegant text-2xl font-bold mb-4" style="color: #4a5d4a;">Pendidikan</h3>
+        <p style="color: #6b7b7b;">Lulusan Sarjana Hukum dari universitas terkemuka dengan sertifikasi internasional di bidang hukum bisnis.</p>
+       </div>
+       <div class="fade-in stagger-3 card-hover p-8 bg-white rounded-xl border border-stone-200/50">
+        <div class="text-4xl mb-4">
+         🤝
+        </div>
+        <h3 class="font-serif-elegant text-2xl font-bold mb-4" style="color: #4a5d4a;">Kepercayaan</h3>
+        <p style="color: #6b7b7b;">Dipercaya oleh ratusan klien korporat dan individu untuk menangani berbagai kasus hukum kompleks.</p>
+       </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+       <div class="bg-white rounded-xl p-12 border border-stone-200/50 fade-in stagger-4">
+        <h3 class="font-serif-elegant text-2xl font-bold mb-6" style="color: #4a5d4a;">Keahlian</h3>
+        <div class="space-y-6">
+         <div>
+          <h4 class="font-semibold mb-4" style="color: #5a6b5a;">Hukum Kecerdasan Buatan &amp; Teknologi</h4>
+          <ul class="space-y-2" style="color: #6b7b7b;">
+           <li>✓ Regulasi AI &amp; Machine Learning</li>
+           <li>✓ Data Privacy &amp; Protection</li>
+           <li>✓ Compliance Teknologi</li>
+           <li>✓ Kontrak Tech &amp; Inovasi</li>
+          </ul>
+         </div>
+         <div>
+          <h4 class="font-semibold mb-4" style="color: #5a6b5a;">Hukum Intelektual &amp; Bisnis Korporat</h4>
+          <ul class="space-y-2" style="color: #6b7b7b;">
+           <li>✓ Paten, Merek &amp; Hak Cipta</li>
+           <li>✓ Penggabungan &amp; Akuisisi Perusahaan</li>
+           <li>✓ Negosiasi Kontrak Bisnis</li>
+           <li>✓ Kepatuhan Regulasi</li>
+          </ul>
+         </div>
+        </div>
+       </div>
+       <div class="bg-white rounded-xl p-12 border border-stone-200/50 fade-in stagger-4">
+        <h3 class="font-serif-elegant text-2xl font-bold mb-6" style="color: #4a5d4a;">Keahlian Tambahan</h3>
+        <ul class="space-y-3" style="color: #6b7b7b;">
+         <li class="flex items-start gap-3"><span style="color: #4a5d4a;">🌐</span> <span><strong>Penerjemahan Profesional:</strong> Menguasai multiple bahasa untuk dokumentasi dan komunikasi internasional</span></li>
+         <li class="flex items-start gap-3"><span style="color: #4a5d4a;">��</span> <span><strong>Negosiasi Internasional:</strong> Pengalaman bekerja dengan perusahaan multinasional dan klien global</span></li>
+         <li class="flex items-start gap-3"><span style="color: #4a5d4a;">📊</span> <span><strong>Analisis Bisnis:</strong> Pemahaman mendalam tentang operasi korporat dan strategi bisnis</span></li>
+        </ul>
+       </div>
+      </div><!-- Sertifikasi Profesional -->
+      <div class="bg-white rounded-xl p-12 border border-stone-200/50 fade-in stagger-4 mb-8">
+       <h3 class="font-serif-elegant text-2xl font-bold mb-8" style="color: #4a5d4a;">Sertifikasi Profesional &amp; Gelar</h3>
+       <div class="grid md:grid-cols-2 gap-6">
+        <div class="flex gap-4 p-6 rounded-lg" style="background-color: #f0eae0;">
+         <div class="flex-shrink-0 pt-1"><span style="color: #4a5d4a; font-size: 24px;">⚖️</span>
+         </div>
+         <div>
+          <h4 class="font-semibold text-lg" style="color: #3d4d3d;">CCL (Certified Corporate Lawyer)</h4>
+          <p class="text-sm" style="color: #8b9b8b;">Sertifikasi Profesi Internasional</p>
+          <p style="color: #6b7b7b;">Kompetensi profesional dalam hukum korporat, M&amp;A, dan tata kelola perusahaan</p>
+         </div>
+        </div>
+        <div class="flex gap-4 p-6 rounded-lg" style="background-color: #f0eae0;">
+         <div class="flex-shrink-0 pt-1"><span style="color: #4a5d4a; font-size: 24px;">📜</span>
+         </div>
+         <div>
+          <h4 class="font-semibold text-lg" style="color: #3d4d3d;">LL.M (Master of Laws)</h4>
+          <p class="text-sm" style="color: #8b9b8b;">Universitas Harvard</p>
+          <p style="color: #6b7b7b;">Spesialisasi dalam Hukum Internasional dan Teknologi</p>
+         </div>
+        </div>
+        <div class="flex gap-4 p-6 rounded-lg" style="background-color: #f0eae0;">
+         <div class="flex-shrink-0 pt-1"><span style="color: #4a5d4a; font-size: 24px;">✅</span>
+         </div>
+         <div>
+          <h4 class="font-semibold text-lg" style="color: #3d4d3d;">CLA (Certified Legal Assistant)</h4>
+          <p class="text-sm" style="color: #8b9b8b;">Sertifikasi Internasional</p>
+          <p style="color: #6b7b7b;">Kompetensi profesional dalam praktik hukum modern</p>
+         </div>
+        </div>
+        <div class="flex gap-4 p-6 rounded-lg" style="background-color: #f0eae0;">
+         <div class="flex-shrink-0 pt-1"><span style="color: #4a5d4a; font-size: 24px;">🏅</span>
+         </div>
+         <div>
+          <h4 class="font-semibold text-lg" style="color: #3d4d3d;">C.CLE (Continuing Legal Education)</h4>
+          <p class="text-sm" style="color: #8b9b8b;">Sertifikasi Pendidikan Berkelanjutan</p>
+          <p style="color: #6b7b7b;">Pembaruan pengetahuan hukum dan standar etika profesional</p>
+         </div>
+        </div>
+        <div class="flex gap-4 p-6 rounded-lg" style="background-color: #f0eae0;">
+         <div class="flex-shrink-0 pt-1"><span style="color: #4a5d4a; font-size: 24px;">⚖️</span>
+         </div>
+         <div>
+          <h4 class="font-semibold text-lg" style="color: #3d4d3d;">S.H (Sarjana Hukum)</h4>
+          <p class="text-sm" style="color: #8b9b8b;">Universitas Diponegoro</p>
+          <p style="color: #6b7b7b;">Pendidikan dasar hukum dengan pencapaian akademis terkemuka</p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <h3 class="font-serif-elegant text-2xl font-bold mb-8" style="color: #4a5d4a;">Riwayat Pendidikan</h3>
+      <div class="space-y-6">
+       <div class="flex gap-4 pb-6 border-b border-stone-200">
+        <div class="flex-shrink-0 pt-1">
+         <div class="flex items-center justify-center h-12 w-12 rounded-lg" style="background-color: #e8dcc8;"><span style="color: #4a5d4a; font-size: 20px;">🎓</span>
+         </div>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg" style="color: #3d4d3d;">Faculty Of Law Universitas Harvard</h4>
+         <p class="text-sm" style="color: #8b9b8b;">Tahun 2036</p>
+         <p style="color: #6b7b7b;">Program pendidikan hukum internasional dengan fokus pada hukum bisnis dan litigasi global</p>
+        </div>
+       </div>
+       <div class="flex gap-4 pb-6 border-b border-stone-200">
+        <div class="flex-shrink-0 pt-1">
+         <div class="flex items-center justify-center h-12 w-12 rounded-lg" style="background-color: #e8dcc8;"><span style="color: #4a5d4a; font-size: 20px;">📚</span>
+         </div>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg" style="color: #3d4d3d;">Fakultas Hukum Universitas Diponegoro</h4>
+         <p class="text-sm" style="color: #8b9b8b;">Tahun 2029</p>
+         <p style="color: #6b7b7b;">Program Sarjana Hukum dengan pencapaian akademis terkemuka</p>
+        </div>
+       </div>
+       <div class="flex gap-4 pb-6 border-b border-stone-200">
+        <div class="flex-shrink-0 pt-1">
+         <div class="flex items-center justify-center h-12 w-12 rounded-lg" style="background-color: #e8dcc8;"><span style="color: #4a5d4a; font-size: 20px;">🏫</span>
+         </div>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg" style="color: #3d4d3d;">SMAN 1 Subang</h4>
+         <p class="text-sm" style="color: #8b9b8b;">Tahun 2026</p>
+         <p style="color: #6b7b7b;">Pendidikan menengah atas dengan fokus pada ilmu sosial</p>
+        </div>
+       </div>
+       <div class="flex gap-4 pb-6 border-b border-stone-200">
+        <div class="flex-shrink-0 pt-1">
+         <div class="flex items-center justify-center h-12 w-12 rounded-lg" style="background-color: #e8dcc8;"><span style="color: #4a5d4a; font-size: 20px;">🏫</span>
+         </div>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg" style="color: #3d4d3d;">SMPN 1 Sagalaherang</h4>
+         <p class="text-sm" style="color: #8b9b8b;">Tahun 2023</p>
+         <p style="color: #6b7b7b;">Pendidikan menengah pertama dengan prestasi akademis yang baik</p>
+        </div>
+       </div>
+       <div class="flex gap-4">
+        <div class="flex-shrink-0 pt-1">
+         <div class="flex items-center justify-center h-12 w-12 rounded-lg" style="background-color: #e8dcc8;"><span style="color: #4a5d4a; font-size: 20px;">��</span>
+         </div>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg" style="color: #3d4d3d;">SDN Ekanugraha</h4>
+         <p class="text-sm" style="color: #8b9b8b;">Tahun 2014</p>
+         <p style="color: #6b7b7b;">Pendidikan dasar dengan fondasi yang kuat</p>
+        </div>
+       </div>
+      </div>
+     </div><!-- Karir -->
+     <div class="bg-white rounded-xl p-12 border border-stone-200/50 fade-in stagger-4 mb-8">
+      <h3 class="font-serif-elegant text-2xl font-bold mb-8" style="color: #4a5d4a;">Riwayat Karir</h3>
+      <div class="space-y-6">
+       <div class="flex gap-4 pb-6 border-b border-stone-200">
+        <div class="flex-shrink-0 pt-1">
+         <div class="flex items-center justify-center h-12 w-12 rounded-lg" style="background-color: #e8dcc8;"><span style="color: #4a5d4a; font-size: 20px;">🤖</span>
+         </div>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg" style="color: #3d4d3d;">Konsultan Hukum - Google (AI &amp; Technology Law)</h4>
+         <p class="text-sm" style="color: #8b9b8b;">2034 - Sekarang</p>
+         <p style="color: #6b7b7b;">Memberikan konsultasi spesialisasi hukum kecerdasan buatan dan teknologi untuk perusahaan global terkemuka, menangani regulasi AI, privasi data, dan kepatuhan internasional</p>
+        </div>
+       </div>
+       <div class="flex gap-4 pb-6 border-b border-stone-200">
+        <div class="flex-shrink-0 pt-1">
+         <div class="flex items-center justify-center h-12 w-12 rounded-lg" style="background-color: #e8dcc8;"><span style="color: #4a5d4a; font-size: 20px;">⚖️</span>
+         </div>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg" style="color: #3d4d3d;">Corporate Lawyer - Unilever</h4>
+         <p class="text-sm" style="color: #8b9b8b;">2032 - 2034</p>
+         <p style="color: #6b7b7b;">Menangani aspek hukum perusahaan multinasional, kontrak korporat, compliance, dan litigasi komersial dengan nilai transaksi signifikan</p>
+        </div>
+       </div>
+       <div class="flex gap-4 pb-6 border-b border-stone-200">
+        <div class="flex-shrink-0 pt-1">
+         <div class="flex items-center justify-center h-12 w-12 rounded-lg" style="background-color: #e8dcc8;"><span style="color: #4a5d4a; font-size: 20px;">💼</span>
+         </div>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg" style="color: #3d4d3d;">Konsultan Hukum - PT Antam (Multinasional)</h4>
+         <p class="text-sm" style="color: #8b9b8b;">2030 - 2032</p>
+         <p style="color: #6b7b7b;">Memberikan konsultasi hukum strategis untuk operasi bisnis multinasional, penanganan compliance, dan negosiasi kontrak bernilai miliaran rupiah</p>
+        </div>
+       </div>
+       <div class="flex gap-4">
+        <div class="flex-shrink-0 pt-1">
+         <div class="flex items-center justify-center h-12 w-12 rounded-lg" style="background-color: #e8dcc8;"><span style="color: #4a5d4a; font-size: 20px;">🌐</span>
+         </div>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg" style="color: #3d4d3d;">Penerjemah Profesional</h4>
+         <p class="text-sm" style="color: #8b9b8b;">2027 - Sekarang</p>
+         <p style="color: #6b7b7b;">Menerjemahkan dokumen hukum, kontrak bisnis, dan komunikasi internasional dengan akurasi tinggi. Memiliki keahlian dalam terminologi hukum multibahasa</p>
+        </div>
+       </div>
+      </div>
+     </div><!-- Organisasi -->
+     <div class="bg-white rounded-xl p-12 border border-stone-200/50 fade-in stagger-4 mb-8">
+      <h3 class="font-serif-elegant text-2xl font-bold mb-8" style="color: #4a5d4a;">Pengalaman Organisasi</h3>
+      <div class="space-y-6">
+       <div class="flex gap-4 pb-6 border-b border-stone-200">
+        <div class="flex-shrink-0 pt-1">
+         <div class="flex items-center justify-center h-12 w-12 rounded-lg" style="background-color: #e8dcc8;"><span style="color: #4a5d4a; font-size: 20px;">👥</span>
+         </div>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg" style="color: #3d4d3d;">Ketua Perkumpulan Pelajar Indonesia - Harvard</h4>
+         <p class="text-sm" style="color: #8b9b8b;">2035 - Sekarang</p>
+         <p style="color: #6b7b7b;">Memimpin komunitas pelajar Indonesia di Harvard University, mempromosikan diplomasi akademik dan kerjasama antar universitas</p>
+        </div>
+       </div>
+       <div class="flex gap-4 pb-6 border-b border-stone-200">
+        <div class="flex-shrink-0 pt-1">
+         <div class="flex items-center justify-center h-12 w-12 rounded-lg" style="background-color: #e8dcc8;"><span style="color: #4a5d4a; font-size: 20px;">⚖️</span>
+         </div>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg" style="color: #3d4d3d;">Anggota Komunitas Lawyer Internasional</h4>
+         <p class="text-sm" style="color: #8b9b8b;">2033 - Sekarang</p>
+         <p style="color: #6b7b7b;">Terlibat dalam jaringan lawyer internasional untuk kolaborasi hukum lintas negara dan pertukaran pengetahuan praktik hukum global</p>
+        </div>
+       </div>
+       <div class="flex gap-4 pb-6 border-b border-stone-200">
+        <div class="flex-shrink-0 pt-1">
+         <div class="flex items-center justify-center h-12 w-12 rounded-lg" style="background-color: #e8dcc8;"><span style="color: #4a5d4a; font-size: 20px;">🌍</span>
+         </div>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg" style="color: #3d4d3d;">Program UNICEF - Spanyol</h4>
+         <p class="text-sm" style="color: #8b9b8b;">2033</p>
+         <p style="color: #6b7b7b;">Ikut serta dalam program internasional UNICEF di Spanyol, berkontribusi pada isu-isu kemanusiaan dan hak anak</p>
+        </div>
+       </div>
+       <div class="flex gap-4 pb-6 border-b border-stone-200">
+        <div class="flex-shrink-0 pt-1">
+         <div class="flex items-center justify-center h-12 w-12 rounded-lg" style="background-color: #e8dcc8;"><span style="color: #4a5d4a; font-size: 20px;">🌐</span>
+         </div>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg" style="color: #3d4d3d;">AIESEC</h4>
+         <p class="text-sm" style="color: #8b9b8b;">2028 - 2034</p>
+         <p style="color: #6b7b7b;">Anggota organisasi internasional terkemuka yang fokus pada pengembangan kepemimpinan dan pertukaran pemuda global</p>
+        </div>
+       </div>
+       <div class="flex gap-4 pb-6 border-b border-stone-200">
+        <div class="flex-shrink-0 pt-1">
+         <div class="flex items-center justify-center h-12 w-12 rounded-lg" style="background-color: #e8dcc8;"><span style="color: #4a5d4a; font-size: 20px;">📚</span>
+         </div>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg" style="color: #3d4d3d;">Ketua Himpunan Fakultas Hukum</h4>
+         <p class="text-sm" style="color: #8b9b8b;">2027 - 2028</p>
+         <p style="color: #6b7b7b;">Memimpin organisasi mahasiswa Fakultas Hukum Universitas Diponegoro dengan fokus pada pemberdayaan akademik dan advokasi hukum</p>
+        </div>
+       </div>
+       <div class="flex gap-4 pb-6 border-b border-stone-200">
+        <div class="flex-shrink-0 pt-1">
+         <div class="flex items-center justify-center h-12 w-12 rounded-lg" style="background-color: #e8dcc8;"><span style="color: #4a5d4a; font-size: 20px;">📚</span>
+         </div>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg" style="color: #3d4d3d;">Anggota Himpunan Fakultas Hukum</h4>
+         <p class="text-sm" style="color: #8b9b8b;">2026 - 2027</p>
+         <p style="color: #6b7b7b;">Berkontribusi dalam kegiatan organisasi mahasiswa hukum termasuk seminar, diskusi ilmiah, dan advokasi hukum</p>
+        </div>
+       </div>
+       <div class="flex gap-4 pb-6 border-b border-stone-200">
+        <div class="flex-shrink-0 pt-1">
+         <div class="flex items-center justify-center h-12 w-12 rounded-lg" style="background-color: #e8dcc8;"><span style="color: #4a5d4a; font-size: 20px;">📰</span>
+         </div>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg" style="color: #3d4d3d;">Ketua Ekstrakulikuler Jurnalistik Titik Hitam</h4>
+         <p class="text-sm" style="color: #8b9b8b;">2024 - 2026</p>
+         <p style="color: #6b7b7b;">Memimpin klub jurnalistik sekolah dengan publikasi artikel investigatif dan pelaporan berita berkualitas</p>
+        </div>
+       </div>
+       <div class="flex gap-4">
+        <div class="flex-shrink-0 pt-1">
+         <div class="flex items-center justify-center h-12 w-12 rounded-lg" style="background-color: #e8dcc8;"><span style="color: #4a5d4a; font-size: 20px;">🔬</span>
+         </div>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg" style="color: #3d4d3d;">Ketua Ekstrakulikuler KIR IPA</h4>
+         <p class="text-sm" style="color: #8b9b8b;">2022 - 2023</p>
+         <p style="color: #6b7b7b;">Memimpin klub penelitian ilmiah dengan mengelola proyek riset dan presentasi karya ilmiah</p>
+        </div>
+       </div>
+      </div>
+     </div><!-- Prestasi -->
+     <div class="bg-white rounded-xl p-12 border border-stone-200/50 fade-in stagger-4">
+      <h3 class="font-serif-elegant text-2xl font-bold mb-8" style="color: #4a5d4a;">Riwayat Prestasi</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+       <div class="flex gap-4 p-4 rounded-lg" style="background-color: #f0eae0;">
+        <div class="flex-shrink-0 pt-1"><span style="color: #4a5d4a; font-size: 24px;">🏆</span>
+        </div>
+        <div>
+         <h4 class="font-semibold" style="color: #3d4d3d;">Juara Legal Drafting Internasional</h4>
+         <p class="text-sm" style="color: #8b9b8b;">2028</p>
+         <p style="color: #6b7b7b;">Memenangkan kompetisi drafting hukum tingkat internasional dengan karya berkualitas tinggi</p>
+        </div>
+       </div>
+       <div class="flex gap-4 p-4 rounded-lg" style="background-color: #f0eae0;">
+        <div class="flex-shrink-0 pt-1"><span style="color: #4a5d4a; font-size: 24px;">🏆</span>
+        </div>
+        <div>
+         <h4 class="font-semibold" style="color: #3d4d3d;">Juara Essay Nasional</h4>
+         <p class="text-sm" style="color: #8b9b8b;">2027</p>
+         <p style="color: #6b7b7b;">Pemenang kompetisi esai nasional dengan tulisan yang mendalam dan orisinil</p>
+        </div>
+       </div>
+       <div class="flex gap-4 p-4 rounded-lg" style="background-color: #f0eae0;">
+        <div class="flex-shrink-0 pt-1"><span style="color: #4a5d4a; font-size: 24px;">🥇</span>
+        </div>
+        <div>
+         <h4 class="font-semibold" style="color: #3d4d3d;">Juara 1 Tim Terbaik Debat Bahasa Indonesia</h4>
+         <p class="text-sm" style="color: #8b9b8b;">Tingkat Kabupaten 2025</p>
+         <p style="color: #6b7b7b;">Memimpin tim debat untuk meraih juara pertama dalam kompetisi tingkat kabupaten</p>
+        </div>
+       </div>
+       <div class="flex gap-4 p-4 rounded-lg" style="background-color: #f0eae0;">
+        <div class="flex-shrink-0 pt-1"><span style="color: #4a5d4a; font-size: 24px;">🥉</span>
+        </div>
+        <div>
+         <h4 class="font-semibold" style="color: #3d4d3d;">Pembicara Terbaik 3 Debat Bahasa Indonesia</h4>
+         <p class="text-sm" style="color: #8b9b8b;">Tingkat Kabupaten 2025</p>
+         <p style="color: #6b7b7b;">Meraih penghargaan sebagai pembicara terbaik ketiga dalam kompetisi debat regional</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+   </main>
+  </div>
+  <div class="section-divider"></div><!-- Portfolio Section -->
+  <section id="portofolio" class="py-20 px-6">
+   <div class="max-w-7xl mx-auto">
+    <h2 class="font-serif-elegant text-4xl md:text-5xl font-bold mb-16 text-center" style="color: #3d4d3d;">Portofolio Kasus</h2>
+    <div class="space-y-8">
+     <div class="fade-in stagger-1 card-hover bg-white rounded-xl overflow-hidden border border-stone-200/50">
+      <div class="md:flex">
+       <div class="md:w-1/3 h-64 md:h-auto" style="background: linear-gradient(135deg, #4a5d4a 0%, #6b7b6b 100%);"></div>
+       <div class="p-8 md:w-2/3 flex flex-col justify-center"><span class="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4 w-fit" style="background-color: #e8dcc8; color: #4a5d4a;">Hukum Korporat</span>
+        <h3 class="font-serif-elegant text-2xl font-bold mb-4" style="color: #3d4d3d;">Negosiasi M&amp;A Senilai Rp 50 Miliar</h3>
+        <p class="mb-4" style="color: #6b7b7b;">Berhasil merepresentasikan klien dalam negosiasi penggabungan dua perusahaan manufaktur terkemuka dengan hasil yang menguntungkan kedua belah pihak.</p>
+        <div class="flex gap-2 flex-wrap"><span class="px-3 py-1 rounded-lg text-sm" style="background-color: #f0eae0; color: #5a6b5a;">Merger</span> <span class="px-3 py-1 rounded-lg text-sm" style="background-color: #f0eae0; color: #5a6b5a;">Akuisisi</span> <span class="px-3 py-1 rounded-lg text-sm" style="background-color: #f0eae0; color: #5a6b5a;">Due Diligence</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="fade-in stagger-2 card-hover bg-white rounded-xl overflow-hidden border border-stone-200/50">
+      <div class="md:flex">
+       <div class="md:w-1/3 h-64 md:h-auto" style="background: linear-gradient(135deg, #6b7b6b 0%, #8b9b8b 100%);"></div>
+       <div class="p-8 md:w-2/3 flex flex-col justify-center"><span class="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4 w-fit" style="background-color: #e8dcc8; color: #4a5d4a;">Litigasi</span>
+        <h3 class="font-serif-elegant text-2xl font-bold mb-4" style="color: #3d4d3d;">Penyelesaian Sengketa Kontrak Komersial</h3>
+        <p class="mb-4" style="color: #6b7b7b;">Memenangkan kasus pertanyaan validitas kontrak di Pengadilan Negeri dengan pembayaran pengganti rugi mencapai Rp 15 miliar kepada klien.</p>
+        <div class="flex gap-2 flex-wrap"><span class="px-3 py-1 rounded-lg text-sm" style="background-color: #f0eae0; color: #5a6b5a;">Litigasi</span> <span class="px-3 py-1 rounded-lg text-sm" style="background-color: #f0eae0; color: #5a6b5a;">Kontrak</span> <span class="px-3 py-1 rounded-lg text-sm" style="background-color: #f0eae0; color: #5a6b5a;">Arbitrase</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="fade-in stagger-3 card-hover bg-white rounded-xl overflow-hidden border border-stone-200/50">
+      <div class="md:flex">
+       <div class="md:w-1/3 h-64 md:h-auto" style="background: linear-gradient(135deg, #8b9b8b 0%, #a0ad9f 100%);"></div>
+       <div class="p-8 md:w-2/3 flex flex-col justify-center"><span class="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4 w-fit" style="background-color: #e8dcc8; color: #4a5d4a;">Hukum Intelektual</span>
+        <h3 class="font-serif-elegant text-2xl font-bold mb-4" style="color: #3d4d3d;">Pendaftaran &amp; Perlindungan Paten</h3>
+        <p class="mb-4" style="color: #6b7b7b;">Mengurus pendaftaran 12 paten untuk klien teknologi dengan memandu proses hingga persetujuan akhir dari Ditjen Kekayaan Intelektual.</p>
+        <div class="flex gap-2 flex-wrap"><span class="px-3 py-1 rounded-lg text-sm" style="background-color: #f0eae0; color: #5a6b5a;">Paten</span> <span class="px-3 py-1 rounded-lg text-sm" style="background-color: #f0eae0; color: #5a6b5a;">Merek</span> <span class="px-3 py-1 rounded-lg text-sm" style="background-color: #f0eae0; color: #5a6b5a;">Hak Cipta</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <div class="section-divider"></div><!-- Contact Section -->
+  <section id="contact" class="py-20 px-6">
+   <div class="max-w-4xl mx-auto">
+    <h2 class="font-serif-elegant text-4xl md:text-5xl font-bold mb-4 text-center" style="color: #3d4d3d;">Hubungi Saya</h2>
+    <p class="text-center mb-16 text-lg" style="color: #6b7b7b;">Siap membantu Anda dengan kebutuhan hukum Anda</p>
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+     <div class="text-center fade-in stagger-1">
+      <div class="text-4xl mb-4">
+       📧
+      </div>
+      <h3 class="font-semibold mb-2" style="color: #4a5d4a;">Email</h3><a id="contact-email" href="mailto:raivalla@lawfirm.com" style="color: #5a6b5a;" class="hover:underline">raivalla@lawfirm.com</a>
+     </div>
+     <div class="text-center fade-in stagger-2">
+      <div class="text-4xl mb-4">
+       📱
+      </div>
+      <h3 class="font-semibold mb-2" style="color: #4a5d4a;">Telepon</h3><a id="contact-phone" href="tel:+62212345678" style="color: #5a6b5a;" class="hover:underline">+62 (21) 2345-678</a>
+     </div>
+     <div class="text-center fade-in stagger-3">
+      <div class="text-4xl mb-4">
+       📍
+      </div>
+      <h3 class="font-semibold mb-2" style="color: #4a5d4a;">Lokasi</h3>
+      <p style="color: #5a6b5a;">Jakarta, Indonesia</p>
+     </div>
+    </div>
+    <div class="fade-in stagger-4 bg-white rounded-xl p-12 border border-stone-200/50">
+     <form id="contact-form" class="space-y-6" onsubmit="handleFormSubmit(event)">
+      <div class="grid md:grid-cols-2 gap-6">
+       <div><label for="name" class="block font-semibold mb-2" style="color: #4a5d4a;">Nama Lengkap</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:ring-2 focus:ring-offset-0" style="focus-ring-color: #4a5d4a;" placeholder="Nama Anda">
+       </div>
+       <div><label for="email" class="block font-semibold mb-2" style="color: #4a5d4a;">Email</label> <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:ring-2 focus:ring-offset-0" style="focus-ring-color: #4a5d4a;" placeholder="email@example.com">
+       </div>
+      </div>
+      <div><label for="subject" class="block font-semibold mb-2" style="color: #4a5d4a;">Subjek</label> <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:ring-2 focus:ring-offset-0" style="focus-ring-color: #4a5d4a;" placeholder="Topik yang ingin didiskusikan">
+      </div>
+      <div><label for="message" class="block font-semibold mb-2" style="color: #4a5d4a;">Pesan</label> <textarea id="message" name="message" required rows="6" class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:ring-2 focus:ring-offset-0" style="focus-ring-color: #4a5d4a;" placeholder="Tuliskan pesan Anda di sini..."></textarea>
+      </div><button type="submit" class="w-full py-3 rounded-lg font-semibold transition-all hover:shadow-lg" style="background-color: #4a5d4a; color: white;"> Kirim Pesan </button>
+      <div id="form-message" class="hidden p-4 rounded-lg text-center font-semibold" style="background-color: #e8f5e9; color: #2e7d32;"></div>
+     </form>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="border-t border-stone-200/50 py-12 px-6">
+   <div class="max-w-7xl mx-auto text-center" style="color: #6b7b7b;">
+    <p class="mb-2">© 2024 Raivalla Yuri SE Pratiwi. Semua hak dilindungi.</p>
+    <p>Advokat &amp; Konsultan Hukum | Jakarta, Indonesia</p>
+   </div>
+  </footer>
+  <script>
+      // Mobile menu toggle
+      document.getElementById('menu-toggle').addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      });
+
+      // Close mobile menu on link click
+      document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', function() {
+          document.getElementById('mobile-menu').classList.add('hidden');
+        });
+      });
+
+      // Trigger fade-in animations
+      window.addEventListener('load', function() {
+        document.querySelectorAll('.fade-in').forEach(el => {
+          el.style.opacity = '1';
+        });
+      });
+
+      // Form submission handler
+      function handleFormSubmit(event) {
+        event.preventDefault();
+        const form = document.getElementById('contact-form');
+        const messageDiv = document.getElementById('form-message');
+        const name = document.getElementById('name').value;
+        
+        // Show success message
+        messageDiv.textContent = `Terima kasih, ${name}! Pesan Anda telah dikirim. Saya akan menghubungi Anda segera.`;
+        messageDiv.classList.remove('hidden');
+        
+        // Reset form
+        form.reset();
+        
+        // Hide message after 5 seconds
+        setTimeout(() => {
+          messageDiv.classList.add('hidden');
+        }, 5000);
+      }
+
+      // Element SDK Initialization
+      const defaultConfig = {
+        lawyer_name: "Raivalla Yuri, SH",
+        tagline: "Advokat & Konsultan Hukum Berpengalaman",
+        email: "raivalla@lawfirm.com",
+        phone: "+62 (21) 2345-678"
+      };
+
+      let config = { ...defaultConfig };
+
+      const elementHandler = {
+        async onConfigChange(newConfig) {
+          config = { ...config, ...newConfig };
+          
+          // Update hero name
+          const heroName = document.getElementById('logo-name');
+          if (heroName) {
+            heroName.textContent = config.lawyer_name || defaultConfig.lawyer_name;
+          }
+          
+          // Update tagline
+          const tagline = document.getElementById('hero-tagline');
+          if (tagline) {
+            tagline.textContent = config.tagline || defaultConfig.tagline;
+          }
+          
+          // Update contact email
+          const emailLink = document.getElementById('contact-email');
+          if (emailLink) {
+            emailLink.href = `mailto:${config.email || defaultConfig.email}`;
+            emailLink.textContent = config.email || defaultConfig.email;
+          }
+          
+          // Update contact phone
+          const phoneLink = document.getElementById('contact-phone');
+          if (phoneLink) {
+            phoneLink.href = `tel:${config.phone || defaultConfig.phone}`;
+            phoneLink.textContent = config.phone || defaultConfig.phone;
+          }
+        }
+      };
+
+      if (window.elementSdk) {
+        window.elementSdk.init({
+          defaultConfig,
+          onConfigChange: elementHandler.onConfigChange,
+          mapToCapabilities: (cfg) => ({
+            recolorables: [],
+            borderables: [],
+            fontEditable: undefined,
+            fontSizeable: undefined
+          }),
+          mapToEditPanelValues: (cfg) => new Map([
+            ['lawyer_name', cfg.lawyer_name || defaultConfig.lawyer_name],
+            ['tagline', cfg.tagline || defaultConfig.tagline],
+            ['email', cfg.email || defaultConfig.email],
+            ['phone', cfg.phone || defaultConfig.phone]
+          ])
+        });
+      }
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c8f55a97251b573',t:'MTc3MDI2MjI4NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
